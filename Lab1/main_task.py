@@ -10,7 +10,8 @@ transposition = list(alphabet)
 
 for _ in range(26):
     index = random.randint(0, 25)
-    transposition[index], transposition[-index] = transposition[-index], transposition[index]
+    index_2 = random.randint(0, 25)
+    transposition[index], transposition[index_2] = transposition[index_2], transposition[index]
 
 encode_transposition = {alphabet[i]: transposition[i] for i in range(26)}
 
